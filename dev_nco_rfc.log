@@ -1,0 +1,39 @@
+**** Trace file opened at 2016-04-19 17:12:04 (UTC+05:30 India Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.5.0 running on 64-bit .NET Framework 4.0.30319.18444
+Program: C:\VendorPortalSchedulers\QCSchedular\QCSchedular.exe
+Working dirctory: C:\VendorPortalSchedulers\QCSchedular
+Operating system: Windows Server 2008 R2 Datacenter Server 64-bit Service Pack 1
+Processor: 4x AMD64 (or x64)
+SAP release: 720, Kernel release: 720, Kernel patch level: 111
+Hostname: VENDOR-PORTAL, IP address: 10.10.26.41, IP_v6 address: 
+
+Default trace level: None
+
+>> Error entry 2016-04-19 17:12:04.718
+Failure to create pool for destination SE37 [ASHOST=10.10.25.12 SYSNR=00 USER=ITSUPPORT CLIENT=900 LANG=EN POOL_SIZE=5 NAME=SE37]
+SAP.Middleware.Connector.RfcLogonException: Password logon no longer possible - too many failed attempts ---> SAP.Middleware.Connector.RfcAbapMessageException: Password logon no longer possible - too many failed attempts
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcConfigParameters options)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcConfigParameters options)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2016-04-19 17:12:04.718
+ASHOST=10.10.25.12 SYSNR=00 USER=ITSUPPORT CLIENT=900 LANG=EN POOL_SIZE=5 NAME=SE37
+SAP.Middleware.Connector.RfcLogonException: Password logon no longer possible - too many failed attempts ---> SAP.Middleware.Connector.RfcAbapMessageException: Password logon no longer possible - too many failed attempts
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcConfigParameters options)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcConfigParameters options)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
